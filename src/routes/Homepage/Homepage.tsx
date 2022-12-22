@@ -1,7 +1,8 @@
 import styles from "./Homepage.module.scss";
+import Header from "../../Layout/Header/Header";
 
 function Homepage() {
-  return <div>Homepage</div>;
+  return <Header />;
 }
 
 export default Homepage;
