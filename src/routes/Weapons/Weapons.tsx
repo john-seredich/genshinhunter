@@ -4,7 +4,6 @@ function Weapons() {
   return (
     <>
       <Header />
-      <h2>Weapons</h2>
     </>
   );
 }

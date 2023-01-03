@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  margin-top: 1rem;
+
+  &__item {
+    background-color: red;
+    width: 125px;
+    height: 152px;
+    margin: 1rem;
+  }
+}
