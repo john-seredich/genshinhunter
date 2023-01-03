@@ -1,22 +1,24 @@
 .header {
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: yellow;
-}
+  background-color: #232b3e;
 
-.nav {
-  display: flex;
-
-  li {
-    margin: 0rem 2rem;
-    list-style: none;
+  h1 {
+    color: #d3bd8c;
   }
 
-  a {
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
+  &__ul {
+    display: flex;
+
+    li {
+      margin: 1rem;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 }
