@@ -1,16 +1,17 @@
 .header {
-  padding: 0rem 1rem;
+  padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #232b3e;
 
   h1 {
-    color: #d3bd8c;
+    color: #cdb68a;
+    font-size: 1.5rem;
   }
 
   &__ul {
-    display: flex;
+    display: none;
 
     li {
       margin: 1rem;
@@ -20,5 +21,70 @@
     a {
       text-decoration: none;
     }
+
+    img {
+      border-radius: 4rem;
+      padding: 0.15rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: #ada495;
+      }
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    color: #cdb68a;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 }
+
+@media screen and (min-width: 900px) {
+  .header {
+    &__ul {
+      img {
+        width: 3.125rem;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    justify-content: space-evenly;
+    padding: 1rem 1.5rem;
+    &__ul {
+      display: flex;
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 1rem 1.5rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    &__ul {
+      img {
+        width: 65px;
+      }
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+// 1200px start large icons
