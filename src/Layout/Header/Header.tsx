@@ -7,7 +7,7 @@ function Header() {
   const linkElement = links.map((link) => {
     return (
       <li key={link.id}>
-        <Link to={`/${link.name.toLowerCase()}`}>
+        <Link to={`/${link.route}`}>
           <img src={link.img} alt="" />
         </Link>
       </li>

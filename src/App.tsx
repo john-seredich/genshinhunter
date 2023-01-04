@@ -3,19 +3,11 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./routes/Homepage/Homepage";
 import Weapons from "./routes/Weapons/Weapons";
+import { routes } from "./routes/routes";
 
 function App() {
   const queryClient = new QueryClient();
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Homepage />,
-    },
-    {
-      path: "/weapons",
-      element: <Weapons />,
-    },
-  ]);
+  const router = createBrowserRouter(routes);
 
   return (
     <QueryClientProvider client={queryClient}>
