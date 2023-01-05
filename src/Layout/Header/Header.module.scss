@@ -14,6 +14,7 @@
     display: none;
 
     li {
+      position: relative;
       margin: 1rem;
       list-style: none;
     }
@@ -40,6 +41,28 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+}
+
+.mobile_menu {
+  background-color: #2f3a53;
+  padding: 2rem 1rem;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+
+    li {
+      margin: 1rem 0.25rem;
+      list-style: none;
+    }
+  }
+}
+
+.active {
+  background-color: #ada495;
+  position: relative;
+  border-radius: 4rem;
 }
 
 @media screen and (min-width: 900px) {
