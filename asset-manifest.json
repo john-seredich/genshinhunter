@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/genshinhunter/static/css/main.cef566f2.css",
-    "main.js": "/genshinhunter/static/js/main.31cc59bb.js",
+    "main.js": "/genshinhunter/static/js/main.e1d51af8.js",
     "static/js/787.3067f6a5.chunk.js": "/genshinhunter/static/js/787.3067f6a5.chunk.js",
     "static/media/inventory_icon_materials.webp": "/genshinhunter/static/media/inventory_icon_materials.03a60ceb136be3cb981d.webp",
     "static/media/inventory_icon_furnishings.webp": "/genshinhunter/static/media/inventory_icon_furnishings.0209dca423135e98a591.webp",
@@ -14,11 +14,11 @@
     "index.html": "/genshinhunter/index.html",
     "static/media/inventory_icon_quest.webp": "/genshinhunter/static/media/inventory_icon_quest.fd4750a45a82650f43c5.webp",
     "main.cef566f2.css.map": "/genshinhunter/static/css/main.cef566f2.css.map",
-    "main.31cc59bb.js.map": "/genshinhunter/static/js/main.31cc59bb.js.map",
+    "main.e1d51af8.js.map": "/genshinhunter/static/js/main.e1d51af8.js.map",
     "787.3067f6a5.chunk.js.map": "/genshinhunter/static/js/787.3067f6a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cef566f2.css",
-    "static/js/main.31cc59bb.js"
+    "static/js/main.e1d51af8.js"
   ]
 }
