@@ -1,12 +1,12 @@
-import weaponImg from "./assets/images/inventory_icon_weapon.webp";
-import artifactImg from "./assets/images/inventory_icons_artifacts.webp";
-import characterDevImg from "./assets/images/inventory_icon_character_development_items.webp";
-import foodImg from "./assets/images/inventory_icon_food.webp";
-import materialImg from "./assets/images/inventory_icon_materials.webp";
-import gadgetImg from "./assets/images/inventory_icon_gadgets.webp";
-import questImg from "./assets/images/inventory_icon_quest.webp";
-import preciousImg from "./assets/images/inventory_icon_precious_items.webp";
-import furnshingImg from "./assets/images/inventory_icon_furnishings.webp";
+import weaponImg from "./assets/images/inventory_icons/inventory_icon_weapon.webp";
+import artifactImg from "./assets/images/inventory_icons/inventory_icons_artifacts.webp";
+import characterDevImg from "./assets/images/inventory_icons/inventory_icon_character_development_items.webp";
+import foodImg from "./assets/images/inventory_icons/inventory_icon_food.webp";
+import materialImg from "./assets/images/inventory_icons/inventory_icon_materials.webp";
+import gadgetImg from "./assets/images/inventory_icons/inventory_icon_gadgets.webp";
+import questImg from "./assets/images/inventory_icons/inventory_icon_quest.webp";
+import preciousImg from "./assets/images/inventory_icons/inventory_icon_precious_items.webp";
+import furnshingImg from "./assets/images/inventory_icons/inventory_icon_furnishings.webp";
 
 export const links = [
   {
