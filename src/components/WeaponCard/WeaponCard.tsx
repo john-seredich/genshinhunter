@@ -1,4 +1,3 @@
-import weaponImg from "../../assets/images/weapons/Weapon_Akuoumaru_Full_Icon.svg";
 import styles from "./WeaponCard.module.scss";
 import axios from "axios";
 import { useQuery } from "react-query";
@@ -11,7 +10,11 @@ function WeaponCard(props: any) {
 
   return (
     <div className={`${styles.item} ${styles[`rarity-${rarity}`]}`}>
-      <img src={weaponImg} alt="" />
+      <img
+        src={require(`../../assets/paimon-images/weapons/${props.name}.png`)}
+        alt=""
+        loading="lazy"
+      />
       <p>Lv. 90</p>
     </div>
   );
