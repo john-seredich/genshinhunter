@@ -1,9 +1,9 @@
 import styles from "./Weapons.module.scss";
 import Header from "../../Layout/Header/Header";
-import weaponImg2 from "../../assets/images/weapons/Weapon_Akuoumaru_Full_Icon.svg";
 import axios from "axios";
 import { useQuery } from "react-query";
 import WeaponCard from "../../components/WeaponCard/WeaponCard";
+import StatsCard from "../../components/StatsCard/StatsCard";
 
 const array1: any[] = new Array(134).fill("filled", 0, 134);
 
@@ -15,10 +15,13 @@ function Weapons() {
   return (
     <>
       <Header />
-      <div className={styles.container}>
-        {data?.data.map((item: any, i: number) => {
-          return <WeaponCard key={i} name={item} />;
-        })}
+      <div className={styles.test_container}>
+        <div className={styles.container}>
+          {data?.data.map((item: any, i: number) => {
+            return <WeaponCard key={i} name={item} />;
+          })}
+        </div>
+        <StatsCard />
       </div>
     </>
   );

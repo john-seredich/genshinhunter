@@ -2,6 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
   place-items: center;
+  width: 100%;
+}
+
+.test_container {
+  display: flex;
 }
 
 .item {
