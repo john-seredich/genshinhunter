@@ -1,5 +1,7 @@
+import styles from "./StatsCard.module.scss";
+
 function StatsCard() {
-  return <div>StatsCard</div>;
+  return <div className={styles.stats_card}>StatsCard</div>;
 }
 
 export default StatsCard;
