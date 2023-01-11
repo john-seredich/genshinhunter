@@ -1,16 +1,18 @@
-import styles from "./Weapons.module.scss";
-import Header from "../../Layout/Header/Header";
 import axios from "axios";
+import { useState } from "react";
 import { useQuery } from "react-query";
-import WeaponCard from "../../components/WeaponCard/WeaponCard";
 import StatsCard from "../../components/StatsCard/StatsCard";
+import WeaponCard from "../../components/WeaponCard/WeaponCard";
 import Footer from "../../Layout/Footer/Footer";
-
-const array1: any[] = new Array(134).fill("filled", 0, 134);
+import Header from "../../Layout/Header/Header";
+import { IActiveCard } from "../../shared/interface/activeCard.interface";
+import { staticItemData } from "../../staticItemData";
+import styles from "./Weapons.module.scss";
 
 const fetchWeaponsList = () => axios.get("https://api.genshin.dev/weapons");
 
 function Weapons() {
+  const [activeCard, setActiveCard] = useState<IActiveCard>(staticItemData);
   const { data } = useQuery(["weaponList"], fetchWeaponsList);
 
   return (
@@ -18,11 +20,13 @@ function Weapons() {
       <Header />
       <div className={styles.test_container}>
         <div className={styles.container}>
-          {data?.data.map((item: any, i: number) => {
-            return <WeaponCard key={i} name={item} />;
+          {data?.data.map((item: string, i: number) => {
+            return (
+              <WeaponCard key={i} name={item} setActiveCard={setActiveCard} />
+            );
           })}
         </div>
-        <StatsCard />
+        <StatsCard {...activeCard} />
       </div>
       <Footer />
     </>
@@ -30,8 +34,3 @@ function Weapons() {
 }
 
 export default Weapons;
-
-// <div className={styles.item} key={i}>
-//   <img src={weaponImg2} alt="" />
-//   <p>Lv. 90</p>
-// </div>

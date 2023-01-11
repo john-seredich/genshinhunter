@@ -1,15 +1,38 @@
-import styles from "./WeaponCard.module.scss";
 import axios from "axios";
 import { useQuery } from "react-query";
+import { IActiveCard } from "../../shared/interface/activeCard.interface";
+import styles from "./WeaponCard.module.scss";
 
-function WeaponCard(props: any) {
+interface Props {
+  name: string;
+  setActiveCard: React.Dispatch<React.SetStateAction<IActiveCard>>;
+}
+
+function WeaponCard(props: Props) {
   const fetchWeaponData = () =>
     axios.get(`https://api.genshin.dev/weapons/${props.name}`);
   const { data } = useQuery(["weaponData", props.name], fetchWeaponData);
-  const rarity = data?.data.rarity;
+
+  const weaponInfo = {
+    name: data?.data.name,
+    rarity: data?.data.rarity,
+    type: data?.data.type,
+    baseAttack: data?.data.baseAttack,
+    subStat: data?.data.subStat,
+    passiveName: data?.data.passiveName,
+    passiveDesc: data?.data.passiveDesc,
+    id: props.name,
+  };
+
+  const clickHandler = () => {
+    props.setActiveCard(weaponInfo);
+  };
 
   return (
-    <div className={`${styles.item} ${styles[`rarity-${rarity}`]}`}>
+    <div
+      className={`${styles.item} ${styles[`rarity-${weaponInfo.rarity}`]}`}
+      onClick={clickHandler}
+    >
       <img
         src={require(`../../assets/paimon-images/weapons/${props.name}.png`)}
         alt=""
