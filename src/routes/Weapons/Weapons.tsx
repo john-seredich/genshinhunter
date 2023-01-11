@@ -4,6 +4,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import WeaponCard from "../../components/WeaponCard/WeaponCard";
 import StatsCard from "../../components/StatsCard/StatsCard";
+import Footer from "../../Layout/Footer/Footer";
 
 const array1: any[] = new Array(134).fill("filled", 0, 134);
 
@@ -23,6 +24,7 @@ function Weapons() {
         </div>
         <StatsCard />
       </div>
+      <Footer />
     </>
   );
 }
