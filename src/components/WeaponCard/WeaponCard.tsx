@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useState } from "react";
 import { useQuery } from "react-query";
 import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import styles from "./WeaponCard.module.scss";
@@ -7,6 +8,7 @@ interface Props {
   name: string;
   activeCardName: string;
   setActiveCard: React.Dispatch<React.SetStateAction<IActiveCard>>;
+  setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function WeaponCard(props: Props) {
@@ -27,6 +29,7 @@ function WeaponCard(props: Props) {
 
   const clickHandler = () => {
     props.setActiveCard(weaponInfo);
+    props.setCardToggle(true);
   };
 
   return (

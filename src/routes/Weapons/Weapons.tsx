@@ -13,6 +13,7 @@ const fetchWeaponsList = () => axios.get("https://api.genshin.dev/weapons");
 
 function Weapons() {
   const [activeCard, setActiveCard] = useState<IActiveCard>(staticItemData);
+  const [cardToggle, setCardToggle] = useState(true);
   const { data } = useQuery(["weaponList"], fetchWeaponsList);
 
   return (
@@ -27,11 +28,14 @@ function Weapons() {
                 name={item}
                 setActiveCard={setActiveCard}
                 activeCardName={activeCard.id}
+                setCardToggle={setCardToggle}
               />
             );
           })}
         </div>
-        <StatsCard {...activeCard} />
+        {cardToggle && (
+          <StatsCard activeCard={activeCard} setCardToggle={setCardToggle} />
+        )}
       </div>
       <Footer />
     </>

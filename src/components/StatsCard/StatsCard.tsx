@@ -1,33 +1,49 @@
 import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import styles from "./StatsCard.module.scss";
 
-function StatsCard(props: IActiveCard) {
+interface Props {
+  setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
+  activeCard: IActiveCard;
+}
+
+function StatsCard(props: Props) {
   return (
-    <div className={`${styles.stats_card} ${styles[`rarity-${props.rarity}`]}`}>
-      <h2 className={styles.stats_card__name}>{props.name}</h2>
+    <div
+      className={`${styles.stats_card} ${
+        styles[`rarity-${props.activeCard.rarity}`]
+      }`}
+      onClick={() => props.setCardToggle(false)}
+    >
+      <h2 className={styles.stats_card__name}>{props.activeCard.name}</h2>
       <div className={styles.stats_card__info}>
         <div className={styles.stats_card__base}>
-          <p className={styles.stats_card__base_bold}>{props.type}</p>
-          <p className={styles.stats_card__base_light}>{props.subStat}</p>
+          <p className={styles.stats_card__base_bold}>
+            {props.activeCard.type}
+          </p>
+          <p className={styles.stats_card__base_light}>
+            {props.activeCard.subStat}
+          </p>
           <p className={styles.stats_card__base_bold}>N/A</p>
           <p className={styles.stats_card__base_light}>Base ATK</p>
-          <h2>{props.baseAttack}</h2>
+          <h2>{props.activeCard.baseAttack}</h2>
           <p>⭐⭐⭐⭐⭐</p>
         </div>
         <img
-          src={require(`../../assets/paimon-images/weapons/${props.id}.png`)}
+          src={require(`../../assets/paimon-images/weapons/${props.activeCard.id}.png`)}
           alt=""
           loading="lazy"
         />
       </div>
       <div className={styles.stats_card__description}>
         <p>
-          {props.passiveName.length === 1 ? "No Passive" : props.passiveName}
+          {props.activeCard.passiveName.length === 1
+            ? "No Passive"
+            : props.activeCard.passiveName}
         </p>
         <p>
-          {props.passiveDesc.length === 1
+          {props.activeCard.passiveDesc.length === 1
             ? "No Description"
-            : "- " + props.passiveDesc}
+            : "- " + props.activeCard.passiveDesc}
         </p>
       </div>
     </div>
