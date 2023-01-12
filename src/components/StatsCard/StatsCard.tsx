@@ -3,7 +3,7 @@ import styles from "./StatsCard.module.scss";
 
 function StatsCard(props: IActiveCard) {
   return (
-    <div className={styles.stats_card}>
+    <div className={`${styles.stats_card} ${styles[`rarity-${props.rarity}`]}`}>
       <h2 className={styles.stats_card__name}>{props.name}</h2>
       <div className={styles.stats_card__info}>
         <div className={styles.stats_card__base}>

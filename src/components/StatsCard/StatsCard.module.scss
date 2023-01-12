@@ -59,3 +59,60 @@
     }
   }
 }
+
+.rarity-1 {
+  .stats_card {
+    &__name {
+      background-color: #72778b;
+    }
+
+    &__info {
+      background-color: #525864;
+    }
+  }
+}
+.rarity-2 {
+  .stats_card {
+    &__name {
+      background-color: #2a8f72;
+    }
+
+    &__info {
+      background-color: #4a6062;
+    }
+  }
+}
+.rarity-3 {
+  .stats_card {
+    &__name {
+      background-color: #5180cb;
+    }
+
+    &__info {
+      background-color: #51597a;
+    }
+  }
+}
+
+.rarity-4 {
+  .stats_card {
+    &__name {
+      background-color: #a156e0;
+    }
+
+    &__info {
+      background-color: #6a5c92;
+    }
+  }
+}
+.rarity-5 {
+  .stats_card {
+    &__name {
+      background-color: #bc6932;
+    }
+
+    &__info {
+      background-color: #755953;
+    }
+  }
+}
