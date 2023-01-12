@@ -1,6 +1,6 @@
 export const staticItemData = {
   name: "Akuoumaru",
-  rarity: 5,
+  rarity: 4,
   type: "Claymore",
   baseAttack: 42,
   subStat: "ATK",

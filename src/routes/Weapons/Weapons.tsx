@@ -22,7 +22,12 @@ function Weapons() {
         <div className={styles.container}>
           {data?.data.map((item: string, i: number) => {
             return (
-              <WeaponCard key={i} name={item} setActiveCard={setActiveCard} />
+              <WeaponCard
+                key={i}
+                name={item}
+                setActiveCard={setActiveCard}
+                activeCardName={activeCard.id}
+              />
             );
           })}
         </div>

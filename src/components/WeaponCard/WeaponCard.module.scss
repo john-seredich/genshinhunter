@@ -32,6 +32,10 @@
   }
 }
 
+.active {
+  outline: 3px solid #fefefe;
+}
+
 .rarity-1 {
   background-color: #72778b;
   // background-image: url("../../assets/images/rarity_bg/bg_item_1_star.svg");

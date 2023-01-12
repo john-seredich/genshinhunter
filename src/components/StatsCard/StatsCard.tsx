@@ -2,22 +2,6 @@ import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import styles from "./StatsCard.module.scss";
 
 function StatsCard(props: IActiveCard) {
-  const description = () => {
-    return (
-      <>
-        <p>
-          {props.passiveName.length === 1 ? "No Passive" : props.passiveName}
-        </p>
-        <p>
-          -{" "}
-          {props.passiveDesc.length === 1
-            ? "No Description"
-            : props.passiveName}
-        </p>
-      </>
-    );
-  };
-
   return (
     <div className={`${styles.stats_card} ${styles[`rarity-${props.rarity}`]}`}>
       <h2 className={styles.stats_card__name}>{props.name}</h2>

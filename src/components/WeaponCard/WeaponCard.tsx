@@ -5,6 +5,7 @@ import styles from "./WeaponCard.module.scss";
 
 interface Props {
   name: string;
+  activeCardName: string;
   setActiveCard: React.Dispatch<React.SetStateAction<IActiveCard>>;
 }
 
@@ -30,7 +31,9 @@ function WeaponCard(props: Props) {
 
   return (
     <div
-      className={`${styles.item} ${styles[`rarity-${weaponInfo.rarity}`]}`}
+      className={`${styles.item} ${styles[`rarity-${weaponInfo.rarity}`]} ${
+        props.activeCardName === props.name ? styles.active : ""
+      }`}
       onClick={clickHandler}
     >
       <img
