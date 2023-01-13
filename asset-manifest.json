@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/genshinhunter/static/css/main.c92b6a18.css",
-    "main.js": "/genshinhunter/static/js/main.6f9b2144.js",
+    "main.js": "/genshinhunter/static/js/main.94764951.js",
     "static/js/787.3067f6a5.chunk.js": "/genshinhunter/static/js/787.3067f6a5.chunk.js",
     "static/media/aqua-simulacra.png": "/genshinhunter/static/media/aqua-simulacra.2e8d8625d66227861a9c.png",
     "static/media/bg_item_5_star.svg": "/genshinhunter/static/media/bg_item_5_star.26e88a475260125489d1.svg",
@@ -174,11 +174,11 @@
     "static/media/inventory_icon_precious_items.webp": "/genshinhunter/static/media/inventory_icon_precious_items.42ac024f73bd30390fdf.webp",
     "static/media/inventory_icon_quest.webp": "/genshinhunter/static/media/inventory_icon_quest.fd4750a45a82650f43c5.webp",
     "main.c92b6a18.css.map": "/genshinhunter/static/css/main.c92b6a18.css.map",
-    "main.6f9b2144.js.map": "/genshinhunter/static/js/main.6f9b2144.js.map",
+    "main.94764951.js.map": "/genshinhunter/static/js/main.94764951.js.map",
     "787.3067f6a5.chunk.js.map": "/genshinhunter/static/js/787.3067f6a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c92b6a18.css",
-    "static/js/main.6f9b2144.js"
+    "static/js/main.94764951.js"
   ]
 }
