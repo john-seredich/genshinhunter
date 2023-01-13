@@ -7,6 +7,10 @@ interface Props {
 }
 
 function StatsCard(props: Props) {
+  const calculateStars = (rarity: number) => {
+    return new Array(rarity).fill("⭐", 0, rarity);
+  };
+
   return (
     <div
       className={`${styles.stats_card} ${
@@ -26,7 +30,7 @@ function StatsCard(props: Props) {
           <p className={styles.stats_card__base_bold}>N/A</p>
           <p className={styles.stats_card__base_light}>Base ATK</p>
           <h2>{props.activeCard.baseAttack}</h2>
-          <p>⭐⭐⭐⭐⭐</p>
+          <p>{calculateStars(props.activeCard.rarity)}</p>
         </div>
         <img
           src={require(`../../assets/paimon-images/weapons/${props.activeCard.id}.png`)}
