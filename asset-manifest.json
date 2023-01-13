@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/genshinhunter/static/css/main.bc532aa7.css",
-    "main.js": "/genshinhunter/static/js/main.94764951.js",
+    "main.css": "/genshinhunter/static/css/main.c92b6a18.css",
+    "main.js": "/genshinhunter/static/js/main.6f9b2144.js",
     "static/js/787.3067f6a5.chunk.js": "/genshinhunter/static/js/787.3067f6a5.chunk.js",
-    "static/media/zh-cn.ttf": "/genshinhunter/static/media/zh-cn.54a8212866e6ec1b1003.ttf",
     "static/media/aqua-simulacra.png": "/genshinhunter/static/media/aqua-simulacra.2e8d8625d66227861a9c.png",
     "static/media/bg_item_5_star.svg": "/genshinhunter/static/media/bg_item_5_star.26e88a475260125489d1.svg",
     "static/media/thundering-pulse.png": "/genshinhunter/static/media/thundering-pulse.bb83cc49eb2daede1c50.png",
@@ -168,18 +167,18 @@
     "static/media/inventory_icon_furnishings.webp": "/genshinhunter/static/media/inventory_icon_furnishings.0209dca423135e98a591.webp",
     "static/media/inventory_icons_artifacts.webp": "/genshinhunter/static/media/inventory_icons_artifacts.f2186e9ea8e17b32a2be.webp",
     "static/media/inventory_icon_weapon.webp": "/genshinhunter/static/media/inventory_icon_weapon.c74968ef16678e5082ef.webp",
+    "index.html": "/genshinhunter/index.html",
     "static/media/inventory_icon_gadgets.webp": "/genshinhunter/static/media/inventory_icon_gadgets.25b135e5b2baf90775c9.webp",
     "static/media/inventory_icon_food.webp": "/genshinhunter/static/media/inventory_icon_food.476dcaaac65303de4d5e.webp",
     "static/media/inventory_icon_character_development_items.webp": "/genshinhunter/static/media/inventory_icon_character_development_items.388fe96f81456b27f0b5.webp",
     "static/media/inventory_icon_precious_items.webp": "/genshinhunter/static/media/inventory_icon_precious_items.42ac024f73bd30390fdf.webp",
-    "index.html": "/genshinhunter/index.html",
     "static/media/inventory_icon_quest.webp": "/genshinhunter/static/media/inventory_icon_quest.fd4750a45a82650f43c5.webp",
-    "main.bc532aa7.css.map": "/genshinhunter/static/css/main.bc532aa7.css.map",
-    "main.94764951.js.map": "/genshinhunter/static/js/main.94764951.js.map",
+    "main.c92b6a18.css.map": "/genshinhunter/static/css/main.c92b6a18.css.map",
+    "main.6f9b2144.js.map": "/genshinhunter/static/js/main.6f9b2144.js.map",
     "787.3067f6a5.chunk.js.map": "/genshinhunter/static/js/787.3067f6a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc532aa7.css",
-    "static/js/main.94764951.js"
+    "static/css/main.c92b6a18.css",
+    "static/js/main.6f9b2144.js"
   ]
 }
