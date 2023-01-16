@@ -34,7 +34,7 @@ function StatsCard(props: Props) {
         </div>
         <img
           src={require(`../../assets/paimon-images/weapons/${props.activeCard.id}.png`)}
-          alt=""
+          alt={props.activeCard.name}
           loading="lazy"
         />
       </div>

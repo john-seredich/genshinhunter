@@ -1,23 +1,23 @@
 .stats_card {
-  // height: 838px;
-  width: 490px;
-  min-width: 490px;
+  position: absolute;
+  height: 100vh;
   background-color: #eae3d7;
-  margin: 1rem 2rem;
+  overflow-y: auto;
 
   &__name {
     background-color: #bc6932;
     color: white;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
   }
 
   &__info {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: #755953;
     display: flex;
     justify-content: space-between;
 
     img {
+      margin-top: 1rem;
       width: 150px;
       height: 150px;
     }
@@ -45,10 +45,11 @@
   }
 
   &__description {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: #eae3d7;
     color: #495366;
     line-height: 1.6;
+    overflow-y: auto;
 
     span {
       color: #3299cc;
@@ -58,6 +59,26 @@
       font-size: 1.35rem;
       font-weight: 600;
     }
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .stats_card {
+    width: 490px;
+    min-width: 490px;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .stats_card {
+    position: relative;
+    height: 73vh;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .stats_card {
+    margin: 1rem 2rem;
   }
 }
 
@@ -72,6 +93,7 @@
     }
   }
 }
+
 .rarity-2 {
   .stats_card {
     &__name {
@@ -83,6 +105,7 @@
     }
   }
 }
+
 .rarity-3 {
   .stats_card {
     &__name {
@@ -106,6 +129,7 @@
     }
   }
 }
+
 .rarity-5 {
   .stats_card {
     &__name {
@@ -117,66 +141,3 @@
     }
   }
 }
-
-// Old Styles
-// .stats_card {
-//   // height: 838px;
-//   width: 490px;
-//   min-width: 490px;
-//   background-color: #eae3d7;
-//   margin: 1rem 2rem;
-
-//   &__name {
-//     background-color: #bc6932;
-//     color: white;
-//     padding: 1rem 1.5rem;
-//   }
-
-//   &__info {
-//     padding: 1rem 1.5rem;
-//     background-color: #755953;
-//     display: flex;
-//     justify-content: space-between;
-
-//     img {
-//       width: 150px;
-//       height: 150px;
-//     }
-//   }
-
-//   &__base {
-//     h2 {
-//       color: white;
-//       font-size: 2rem;
-//     }
-
-//     p {
-//       font-size: 1.35rem;
-//       margin: 0.25rem 0rem;
-//     }
-
-//     &_light {
-//       color: #b8aba9;
-//     }
-
-//     &_bold {
-//       color: white;
-//     }
-//   }
-
-//   &__description {
-//     padding: 1rem 1.5rem;
-//     background-color: #eae3d7;
-//     color: #495366;
-//     line-height: 1.6;
-
-//     span {
-//       color: #3299cc;
-//     }
-
-//     p {
-//       font-size: 1.35rem;
-//       font-weight: 500;
-//     }
-//   }
-// }
