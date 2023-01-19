@@ -1,46 +1,30 @@
-import axios from "axios";
-import { useState } from "react";
-import { useQuery } from "react-query";
-import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import styles from "./WeaponCard.module.scss";
+import { IActiveCard } from "../../shared/interface/activeCard.interface";
 
 interface Props {
-  name: string;
+  weapon: any;
   activeCardName: string;
   setActiveCard: React.Dispatch<React.SetStateAction<IActiveCard>>;
   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function WeaponCard(props: Props) {
-  const fetchWeaponData = () =>
-    axios.get(`https://api.genshin.dev/weapons/${props.name}`);
-  const { data } = useQuery(["weaponData", props.name], fetchWeaponData);
-
-  const weaponInfo = {
-    name: data?.data.name,
-    rarity: data?.data.rarity,
-    type: data?.data.type,
-    baseAttack: data?.data.baseAttack,
-    subStat: data?.data.subStat,
-    passiveName: data?.data.passiveName,
-    passiveDesc: data?.data.passiveDesc,
-    id: props.name,
-  };
+  const activeCardStyles =
+    props.activeCardName === props.weapon.name ? styles.active : "";
+  const rarityStyles = styles[`rarity-${props.weapon.data.rarity}`];
 
   const clickHandler = () => {
-    props.setActiveCard(weaponInfo);
+    props.setActiveCard({ ...props.weapon.data, id: props.weapon.name });
     props.setCardToggle(true);
   };
 
   return (
     <div
-      className={`${styles.item} ${styles[`rarity-${weaponInfo.rarity}`]} ${
-        props.activeCardName === props.name ? styles.active : ""
-      }`}
+      className={`${styles.item} ${rarityStyles}  ${activeCardStyles} `}
       onClick={clickHandler}
     >
       <img
-        src={require(`../../assets/paimon-images/weapons/${props.name}.png`)}
+        src={require(`../../assets/paimon-images/weapons/${props.weapon.name}.png`)}
         alt=""
         loading="lazy"
       />
