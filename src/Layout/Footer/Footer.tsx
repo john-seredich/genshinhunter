@@ -1,9 +1,13 @@
 import styles from "./Footer.module.scss";
+import { HiArrowsUpDown } from "react-icons/hi2";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <h1>Footer</h1>
+      <button className={styles.footer__dropbtn}>Quality</button>
+      <button className={styles.footer__orderbtn}>
+        <HiArrowsUpDown />
+      </button>
     </footer>
   );
 }
