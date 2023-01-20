@@ -23,29 +23,25 @@ const fetchWeapons = async () => {
 function Weapons() {
   const [activeCard, setActiveCard] = useState<IActiveCard>(staticItemData);
   const [cardToggle, setCardToggle] = useState(true);
-  const { data } = useQuery(["weaponsTest"], fetchWeapons);
+  const { data: weaponList } = useQuery(["weaponsTest"], fetchWeapons);
+
+  const weaponListElement = weaponList?.map((weapon) => {
+    return (
+      <WeaponCard
+        key={weapon.name}
+        weapon={weapon}
+        setActiveCard={setActiveCard}
+        activeCardName={activeCard.id}
+        setCardToggle={setCardToggle}
+      />
+    );
+  });
 
   return (
     <>
       <Header />
       <div className={styles.test_container}>
-        <div className={styles.container}>
-          {data
-            ?.map((obj) => {
-              return obj;
-            })
-            .map((weapon) => {
-              return (
-                <WeaponCard
-                  key={weapon.name}
-                  weapon={weapon}
-                  setActiveCard={setActiveCard}
-                  activeCardName={activeCard.id}
-                  setCardToggle={setCardToggle}
-                />
-              );
-            })}
-        </div>
+        <div className={styles.container}>{weaponListElement}</div>
         {cardToggle && (
           <StatsCard activeCard={activeCard} setCardToggle={setCardToggle} />
         )}
