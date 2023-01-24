@@ -9,7 +9,11 @@ import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import { staticItemData } from "../../staticItemData";
 import styles from "./Weapons.module.scss";
 
-const fetchWeapons = async () => {
+interface IWeaponList {
+  data: IActiveCard;
+}
+
+const fetchWeapons = async (sort: string) => {
   const weaponsList = await axios.get("https://api.genshin.dev/weapons");
   const weapons = await Promise.all(
     weaponsList?.data.map(async (weapon: string) => {
@@ -17,13 +21,24 @@ const fetchWeapons = async () => {
       return { name: weapon, data: res.data };
     })
   );
-  return weapons;
+
+  return weapons
+    .map(({ data, name }) => {
+      return { data, name };
+    })
+    .sort(sortFn(sort));
 };
+
+const sortFn = (dir: string) =>
+  dir === "asc"
+    ? (a: IWeaponList, b: IWeaponList) => a.data.rarity - b.data.rarity
+    : (a: IWeaponList, b: IWeaponList) => b.data.rarity - a.data.rarity;
 
 function Weapons() {
   const [activeCard, setActiveCard] = useState<IActiveCard>(staticItemData);
   const [cardToggle, setCardToggle] = useState(true);
-  const { data: weaponList } = useQuery(["weaponsTest"], fetchWeapons);
+  const [sort, setSort] = useState("asc");
+  const { data: weaponList } = useQuery([sort], () => fetchWeapons(sort));
 
   const weaponListElement = weaponList?.map((weapon) => {
     return (
@@ -46,7 +61,7 @@ function Weapons() {
           <StatsCard activeCard={activeCard} setCardToggle={setCardToggle} />
         )}
       </div>
-      <Footer />
+      <Footer sort={sort} setSort={setSort} />
     </>
   );
 }
