@@ -36,7 +36,7 @@ const sortFn = (dir: string) =>
 
 function Weapons() {
   const [activeCard, setActiveCard] = useState<IActiveCard>(staticItemData);
-  const [cardToggle, setCardToggle] = useState(true);
+  const [cardToggle, setCardToggle] = useState(false);
   const [sort, setSort] = useState("asc");
   const { data: weaponList } = useQuery([sort], () => fetchWeapons(sort));
 
