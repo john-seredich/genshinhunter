@@ -1,32 +1,35 @@
 import styles from "./ItemCards.module.scss";
-// import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import { IStaticFoodData } from "../staticFoodData.interface";
 
 interface Props {
-  // items: any;
-  // setActiveCard: React.Dispatch<React.SetStateAction<IStaticFoodData>>;
-  // setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
+  items: [string, IStaticFoodData];
+  activeItem: IStaticFoodData;
+  setActiveItem: React.Dispatch<React.SetStateAction<IStaticFoodData>>;
+  setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function ItemCards(props: any) {
-  const tempNames = props.items[0];
+function ItemCards({ items, activeItem, setActiveItem, setCardToggle }: Props) {
   const activeCardStyles =
-    props.activeCardName === props.items[0] ? styles.active : "";
-  const rarityStyles = styles[`rarity-${props.items[1].rarity}`];
+    activeItem.name === items[1].name ? styles.active : "";
+  const rarityStyles = styles[`rarity-${items[1].rarity}`];
 
   const clickHandler = () => {
-    props.setActiveItem({ ...props.items[1], id: props.items[0] });
-    props.setCardToggle(true);
+    setActiveItem({ ...items[1] });
+    setCardToggle(true);
   };
 
   return (
-    <div className={`${styles.item} ${rarityStyles}`} onClick={clickHandler}>
-      <div className={styles.item__img}></div>
-      {/* <img
-        src={require(`../../assets/paimon-images/weapons/${props.weapon.name}.png`)}
-        alt=""
-        loading="lazy"
-      /> */}
+    <div
+      className={`${styles.item} ${rarityStyles} ${activeCardStyles}`}
+      onClick={clickHandler}
+    >
+      <div className={styles.item__img}>
+        <img
+          src={require(`../../assets/paimon-images/Food/Item_Adeptus'_Temptation.webp`)}
+          alt=""
+          loading="lazy"
+        />
+      </div>
       <p>1</p>
     </div>
   );
