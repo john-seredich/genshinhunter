@@ -7,21 +7,27 @@ import { IStaticFoodData } from "../../test/staticFoodData.interface";
 import InfoCard from "../../test/InfoCard/InfoCard";
 import ItemCards from "../../test/ItemCards/ItemCards";
 
+interface IApiData {
+  name: string;
+  data: IStaticFoodData;
+}
+
 function Food() {
   const [activeItem, setActiveItem] = useState<IStaticFoodData>(staticFoodData);
   const [cardToggle, setCardToggle] = useState(false);
   const { data } = useGenshinData("consumables");
 
-  const consumables = data?.map((consumObj) => {
+  const consumables = data?.map((consumObj: IApiData) => {
     return Object.entries(consumObj.data);
   });
 
-  const foods = consumables?.[0].map((food) => {
+  const foods = consumables?.[0].map((food: [string, IStaticFoodData]) => {
     return (
       <ItemCards
         key={food[0]}
         items={food}
         setActiveItem={setActiveItem}
+        activeItem={activeItem}
         setCardToggle={setCardToggle}
       />
     );
@@ -33,6 +39,7 @@ function Food() {
         key={potion[0]}
         items={potion}
         setActiveItem={setActiveItem}
+        activeItem={activeItem}
         setCardToggle={setCardToggle}
       />
     );
