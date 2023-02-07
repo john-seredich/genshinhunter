@@ -8,11 +8,13 @@ import Gadgets from "./Gadets/Gadgets";
 import Materials from "./Materials/Materials";
 import PreciousItems from "./PreciousItems/PreciousItems";
 import Quests from "./Quests/Quests";
+import ErrorPage from "./ErrorPage/ErrorPage";
 
 export const routes = [
   {
     path: "/",
     element: <Homepage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/weapons",
