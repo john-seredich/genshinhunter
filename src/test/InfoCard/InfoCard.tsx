@@ -14,11 +14,11 @@ function InfoCard(props: Props) {
 
   return (
     <div
-      className={`${styles.stats_card} ${rarity} `}
+      className={`${styles.info_card} ${rarity} `}
       onClick={() => props.setCardToggle(false)}
     >
-      <h2 className={styles.stats_card__name}>{props.activeItem.name}</h2>
-      <div className={styles.stats_card__images}>
+      <h2 className={styles.info_card__name}>{props.activeItem.name}</h2>
+      <div className={styles.info_card__images}>
         <p>{calculateStars(props.activeItem.rarity)}</p>
         <img
           src={require(`../../assets/paimon-images/Food/Item_Adeptus'_Temptation.webp`)}
@@ -26,7 +26,7 @@ function InfoCard(props: Props) {
           loading="lazy"
         />
       </div>
-      <div className={styles.stats_card__description}>
+      <div className={styles.info_card__description}>
         <p>
           {props.activeItem.effect
             ? "• " + props.activeItem.effect

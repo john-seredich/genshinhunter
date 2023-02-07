@@ -1,4 +1,4 @@
-.stats_card {
+.info_card {
   position: absolute;
   height: 100vh;
   background-color: #eae3d7;
@@ -54,27 +54,27 @@
 }
 
 @media screen and (min-width: 490px) {
-  .stats_card {
+  .info_card {
     width: 490px;
     min-width: 490px;
   }
 }
 
 @media screen and (min-width: 690px) {
-  .stats_card {
+  .info_card {
     position: relative;
     height: 73vh;
   }
 }
 
 @media screen and (min-width: 820px) {
-  .stats_card {
+  .info_card {
     margin: 1rem 2rem;
   }
 }
 
 .rarity-1 {
-  .stats_card {
+  .info_card {
     &__name {
       background-color: #72778b;
     }
@@ -86,7 +86,7 @@
 }
 
 .rarity-2 {
-  .stats_card {
+  .info_card {
     &__name {
       background-color: #2a8f72;
     }
@@ -98,7 +98,7 @@
 }
 
 .rarity-3 {
-  .stats_card {
+  .info_card {
     &__name {
       background-color: #5180cb;
     }
@@ -110,7 +110,7 @@
 }
 
 .rarity-4 {
-  .stats_card {
+  .info_card {
     &__name {
       background-color: #a156e0;
     }
@@ -122,7 +122,7 @@
 }
 
 .rarity-5 {
-  .stats_card {
+  .info_card {
     &__name {
       background-color: #bc6932;
     }
