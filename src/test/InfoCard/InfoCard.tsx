@@ -1,38 +1,30 @@
-// import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import styles from "./InfoCard.module.scss";
+import { IStaticFoodData } from "../staticFoodData.interface";
 
-// interface Props {
-//   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
-//   activeCard: IActiveCard;
-// }
+interface Props {
+  setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
+  activeItem: IStaticFoodData;
+}
 
-function InfoCard(props: any) {
-  console.log(props);
-
+function InfoCard(props: Props) {
+  const rarity = styles[`rarity-${props.activeItem.rarity}`];
   const calculateStars = (rarity: number) => {
     return new Array(rarity).fill("⭐", 0, rarity);
   };
 
   return (
     <div
-      className={`${styles.stats_card}  ${
-        styles[`rarity-${props.activeItem.rarity}`]
-      } `}
+      className={`${styles.stats_card} ${rarity} `}
       onClick={() => props.setCardToggle(false)}
     >
       <h2 className={styles.stats_card__name}>{props.activeItem.name}</h2>
-      <div className={styles.stats_card__info}>
-        <div className={styles.stats_card__base}>
-          <p className={styles.stats_card__base_bold}>
-            {/* {props.activeCard.type} */}
-          </p>
-          <p>{calculateStars(props.activeItem.rarity)}</p>
-        </div>
-        {/* <img
-          src={require(`../../assets/paimon-images/weapons/${props.activeCard.id}.png`)}
-          alt={props.activeCard.name}
+      <div className={styles.stats_card__images}>
+        <p>{calculateStars(props.activeItem.rarity)}</p>
+        <img
+          src={require(`../../assets/paimon-images/Food/Item_Adeptus'_Temptation.webp`)}
+          alt=""
           loading="lazy"
-        /> */}
+        />
       </div>
       <div className={styles.stats_card__description}>
         <p>
@@ -51,55 +43,3 @@ function InfoCard(props: any) {
 }
 
 export default InfoCard;
-
-// // import { IActiveCard } from "../../shared/interface/activeCard.interface";
-// import styles from "./InfoCard.module.scss";
-
-// // interface Props {
-// //   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
-// //   activeCard: IActiveCard;
-// // }
-
-// function InfoCard(props: any) {
-//   // const calculateStars = (rarity: number) => {
-//   //   return new Array(rarity).fill("⭐", 0, rarity);
-//   // };
-
-//   return (
-//     <div
-//       className={`${styles.stats_card} ${
-//         styles[`rarity-${props.activeCard.rarity}`]
-//       }`}
-//       onClick={() => props.setCardToggle(false)}
-//     >
-//       <h2 className={styles.stats_card__name}>{props.activeCard.name}</h2>
-//       <div className={styles.stats_card__info}>
-//         <div className={styles.stats_card__base}>
-//           <p className={styles.stats_card__base_bold}>
-//             {props.activeCard.type}
-//           </p>
-//           {/* <p>{calculateStars(props.activeCard.rarity)}</p> */}
-//         </div>
-//         <img
-//           src={require(`../../assets/paimon-images/weapons/${props.activeCard.id}.png`)}
-//           alt={props.activeCard.name}
-//           loading="lazy"
-//         />
-//       </div>
-//       <div className={styles.stats_card__description}>
-//         <p>
-//           {props.activeCard.passiveName.length === 1
-//             ? "No Passive"
-//             : props.activeCard.passiveName}
-//         </p>
-//         <p>
-//           {props.activeCard.passiveDesc.length === 1
-//             ? "No Description"
-//             : "- " + props.activeCard.passiveDesc}
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default InfoCard;
