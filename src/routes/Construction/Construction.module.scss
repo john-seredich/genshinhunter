@@ -3,6 +3,9 @@
   margin-top: 2rem;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
     font-size: 2rem;
@@ -16,11 +19,17 @@
     display: inline-block;
     margin-top: 1.5rem;
     color: white;
+    background-color: #707da1;
+    width: 125px;
     font-size: 1.15rem;
     padding: 0.65rem 2rem;
-    background-color: #e94e2e;
     font-weight: 600;
     border-radius: 0.5rem;
     text-decoration: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #5c6682;
+    }
   }
 }

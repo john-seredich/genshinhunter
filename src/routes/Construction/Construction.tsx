@@ -1,4 +1,5 @@
 import styles from "./Construction.module.scss";
+import { Link } from "react-router-dom";
 
 function Construction() {
   return (
@@ -12,6 +13,7 @@ function Construction() {
       >
         Github
       </a>
+      <Link to="/">Homepage</Link>
     </div>
   );
 }
