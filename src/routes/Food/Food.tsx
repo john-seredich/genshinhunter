@@ -4,8 +4,8 @@ import { useGenshinData } from "../../hooks/useGenshinData";
 import { useState } from "react";
 import { staticFoodData } from "../../staticItemData";
 import { IStaticFoodData } from "../../test/staticFoodData.interface";
-import InfoCard from "../../test/InfoCard/InfoCard";
-import ItemCards from "../../test/ItemCards/ItemCards";
+import InfoCard from "../../components/FoodStatsCard/FoodStatsCard";
+import FoodCards from "../../components/FoodCards/FoodCards";
 
 interface IApiData {
   name: string;
@@ -23,7 +23,7 @@ function Food() {
 
   const foods = consumables?.[0].map((food: [string, IStaticFoodData]) => {
     return (
-      <ItemCards
+      <FoodCards
         key={food[0]}
         items={food}
         setActiveItem={setActiveItem}
@@ -35,7 +35,7 @@ function Food() {
 
   const potions = consumables?.[1].map((potion) => {
     return (
-      <ItemCards
+      <FoodCards
         key={potion[0]}
         items={potion}
         setActiveItem={setActiveItem}

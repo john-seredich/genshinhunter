@@ -1,5 +1,5 @@
 import { IActiveCard } from "../../shared/interface/activeCard.interface";
-import styles from "./StatsCard.module.scss";
+import styles from "./WeaponStatsCard.module.scss";
 
 interface Props {
   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;

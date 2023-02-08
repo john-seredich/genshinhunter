@@ -1,12 +1,12 @@
-import styles from "./InfoCard.module.scss";
-import { IStaticFoodData } from "../staticFoodData.interface";
+import styles from "./FoodStatsCard.module.scss";
+import { IStaticFoodData } from "../../test/staticFoodData.interface";
 
 interface Props {
   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
   activeItem: IStaticFoodData;
 }
 
-function InfoCard(props: Props) {
+function FoodStatsCard(props: Props) {
   const rarity = styles[`rarity-${props.activeItem.rarity}`];
   const calculateStars = (rarity: number) => {
     return new Array(rarity).fill("⭐", 0, rarity);
@@ -42,4 +42,4 @@ function InfoCard(props: Props) {
   );
 }
 
-export default InfoCard;
+export default FoodStatsCard;

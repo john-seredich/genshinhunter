@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { useQuery } from "react-query";
-import StatsCard from "../../components/StatsCard/StatsCard";
-import WeaponCard from "../../components/WeaponCard/WeaponCard";
+import WeaponStatsCard from "../../components/WeaponStatsCard/WeaponStatsCard";
+import WeaponCard from "../../components/WeaponCards/WeaponCard";
 import Footer from "../../Layout/Footer/Footer";
 import Header from "../../Layout/Header/Header";
 import { IActiveCard } from "../../shared/interface/activeCard.interface";
@@ -58,7 +58,10 @@ function Weapons() {
       <div className={styles.test_container}>
         <div className={styles.container}>{weaponListElement}</div>
         {cardToggle && (
-          <StatsCard activeCard={activeCard} setCardToggle={setCardToggle} />
+          <WeaponStatsCard
+            activeCard={activeCard}
+            setCardToggle={setCardToggle}
+          />
         )}
       </div>
       <Footer sort={sort} setSort={setSort} />

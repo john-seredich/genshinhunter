@@ -1,5 +1,5 @@
-import styles from "./ItemCards.module.scss";
-import { IStaticFoodData } from "../staticFoodData.interface";
+import styles from "./FoodCards.module.scss";
+import { IStaticFoodData } from "../../test/staticFoodData.interface";
 
 interface Props {
   items: [string, IStaticFoodData];
@@ -8,7 +8,7 @@ interface Props {
   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function ItemCards({ items, activeItem, setActiveItem, setCardToggle }: Props) {
+function FoodCards({ items, activeItem, setActiveItem, setCardToggle }: Props) {
   const activeCardStyles =
     activeItem.name === items[1].name ? styles.active : "";
   const rarityStyles = styles[`rarity-${items[1].rarity}`];
@@ -35,4 +35,4 @@ function ItemCards({ items, activeItem, setActiveItem, setCardToggle }: Props) {
   );
 }
 
-export default ItemCards;
+export default FoodCards;
