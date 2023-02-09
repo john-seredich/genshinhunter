@@ -1,11 +1,12 @@
 import Header from "../../Layout/Header/Header";
+import Construction from "../Construction/Construction";
 import styles from "./PreciousItems.module.scss";
 
 function PreciousItems() {
   return (
     <>
       <Header />
-      <div>PreciousItems</div>;
+      <Construction />
     </>
   );
 }
