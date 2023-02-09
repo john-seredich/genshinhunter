@@ -14,7 +14,7 @@ interface IWeaponList {
 }
 
 const fetchWeapons = async (sort: string) => {
-  const weaponsList = await axios.get("https://api.genshin.dev/weapons");
+  const weaponsList = await axios.get("https://api.genshin.dev/weapon");
   const weapons = await Promise.all(
     weaponsList?.data.map(async (weapon: string) => {
       const res = await axios.get(`https://api.genshin.dev/weapons/${weapon}`);
@@ -38,7 +38,11 @@ function Weapons() {
   const [activeCard, setActiveCard] = useState<IActiveCard>(staticItemData);
   const [cardToggle, setCardToggle] = useState(false);
   const [sort, setSort] = useState("asc");
-  const { data: weaponList } = useQuery([sort], () => fetchWeapons(sort));
+  const {
+    data: weaponList,
+    isLoading,
+    error,
+  } = useQuery([sort], () => fetchWeapons(sort));
 
   const weaponListElement = weaponList?.map((weapon) => {
     return (
@@ -56,6 +60,12 @@ function Weapons() {
     <>
       <Header />
       <div className={styles.test_container}>
+        {isLoading ? <h2 className={styles.loading}>Loading...</h2> : ""}
+        {error instanceof Error ? (
+          <h2 className={styles.error}>{error.message}</h2>
+        ) : (
+          ""
+        )}
         <div className={styles.container}>{weaponListElement}</div>
         {cardToggle && (
           <WeaponStatsCard

@@ -37,6 +37,24 @@
   }
 }
 
+.loading {
+  display: inline-block;
+  margin-top: 1rem;
+  margin: 1rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.error {
+  display: inline-block;
+  margin-top: 1rem;
+  margin: 1rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: rgb(233, 20, 20);
+}
+
 @media screen and (min-width: 400px) {
   .container {
     margin: 0rem 2rem;
