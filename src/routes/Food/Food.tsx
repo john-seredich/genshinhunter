@@ -15,7 +15,7 @@ interface IApiData {
 function Food() {
   const [activeItem, setActiveItem] = useState<IStaticFoodData>(staticFoodData);
   const [cardToggle, setCardToggle] = useState(false);
-  const { data } = useGenshinData("consumables");
+  const { data, isLoading, error } = useGenshinData("consumables");
 
   const consumables = data?.map((consumObj: IApiData) => {
     return Object.entries(consumObj.data);
@@ -50,6 +50,12 @@ function Food() {
       <Header />
       <div className={styles.test_container}>
         <div className={styles.container}>
+          {isLoading ? <h2 className={styles.loading}>Loading...</h2> : ""}
+          {error instanceof Error ? (
+            <h2 className={styles.error}>{error.message}</h2>
+          ) : (
+            ""
+          )}
           {foods}
           {potions}
         </div>

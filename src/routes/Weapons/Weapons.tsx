@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import WeaponStatsCard from "../../components/WeaponStatsCard/WeaponStatsCard";
 import WeaponCard from "../../components/WeaponCards/WeaponCard";
-import Footer from "../../Layout/Footer/Footer";
+import Sort from "../../Layout/Sort/Sort";
 import Header from "../../Layout/Header/Header";
 import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import { staticItemData } from "../../staticItemData";
@@ -14,7 +14,7 @@ interface IWeaponList {
 }
 
 const fetchWeapons = async (sort: string) => {
-  const weaponsList = await axios.get("https://api.genshin.dev/weapon");
+  const weaponsList = await axios.get("https://api.genshin.dev/weapons");
   const weapons = await Promise.all(
     weaponsList?.data.map(async (weapon: string) => {
       const res = await axios.get(`https://api.genshin.dev/weapons/${weapon}`);
@@ -74,7 +74,7 @@ function Weapons() {
           />
         )}
       </div>
-      <Footer sort={sort} setSort={setSort} />
+      <Sort sort={sort} setSort={setSort} />
     </>
   );
 }
