@@ -47,7 +47,9 @@ function Header() {
   return (
     <>
       <header className={styles.header}>
-        <h1>GenshinHunter</h1>
+        <h1>
+          <Link to="/">GenshinHunter</Link>
+        </h1>
         <nav>
           <ul className={styles.header__ul}>{linkElement}</ul>
           <button className={styles.header__btn} onClick={toggleMenuHandler}>
