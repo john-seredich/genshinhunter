@@ -60,13 +60,15 @@ function Weapons() {
     <>
       <Header />
       <div className={styles.test_container}>
-        {isLoading ? <h2 className={styles.loading}>Loading...</h2> : ""}
-        {error instanceof Error ? (
-          <h2 className={styles.error}>{error.message}</h2>
-        ) : (
-          ""
-        )}
-        <div className={styles.container}>{weaponListElement}</div>
+        <div className={styles.container}>
+          {isLoading ? <h2 className={styles.loading}>Loading...</h2> : ""}
+          {error instanceof Error ? (
+            <h2 className={styles.error}>{error.message}</h2>
+          ) : (
+            ""
+          )}
+          {weaponListElement}
+        </div>
         {cardToggle && (
           <WeaponStatsCard
             activeCard={activeCard}
