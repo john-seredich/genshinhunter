@@ -1,5 +1,5 @@
 import styles from "./FoodStatsCard.module.scss";
-import { IStaticFoodData } from "../../test/staticFoodData.interface";
+import { IStaticFoodData } from "../../shared/interface/staticFoodData.interface";
 
 interface Props {
   setCardToggle: React.Dispatch<React.SetStateAction<boolean>>;

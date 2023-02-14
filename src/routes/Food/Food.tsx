@@ -3,7 +3,7 @@ import Header from "../../Layout/Header/Header";
 import { useGenshinData } from "../../hooks/useGenshinData";
 import { useState } from "react";
 import { staticFoodData } from "../../staticItemData";
-import { IStaticFoodData } from "../../test/staticFoodData.interface";
+import { IStaticFoodData } from "../../shared/interface/staticFoodData.interface";
 import InfoCard from "../../components/FoodStatsCard/FoodStatsCard";
 import FoodCards from "../../components/FoodCards/FoodCards";
 import Footer from "../../Layout/Footer/Footer";

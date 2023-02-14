@@ -1,5 +1,5 @@
 import styles from "./FoodCards.module.scss";
-import { IStaticFoodData } from "../../test/staticFoodData.interface";
+import { IStaticFoodData } from "../../shared/interface/staticFoodData.interface";
 
 interface Props {
   items: [string, IStaticFoodData];
