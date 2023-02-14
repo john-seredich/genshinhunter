@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { links } from "../../links";
 import { useState, useEffect } from "react";
 import styles from "./Header.module.scss";
-import { FaBars } from "react-icons/fa";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 function Header() {
@@ -52,8 +51,13 @@ function Header() {
         </h1>
         <nav>
           <ul className={styles.header__ul}>{linkElement}</ul>
-          <button className={styles.header__btn} onClick={toggleMenuHandler}>
+          {/* <button className={styles.header__btn} onClick={toggleMenuHandler}>
             <FaBars />
+          </button> */}
+          <button className={styles.header__btn} onClick={toggleMenuHandler}>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </nav>
       </header>
