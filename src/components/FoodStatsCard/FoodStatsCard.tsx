@@ -21,7 +21,7 @@ function FoodStatsCard(props: Props) {
       <div className={styles.info_card__images}>
         <p>{calculateStars(props.activeItem.rarity)}</p>
         <img
-          src={require(`../../assets/paimon-images/Food/Item_Adeptus'_Temptation.webp`)}
+          src={require(`../../assets/images/Food/Item_Adeptus'_Temptation.webp`)}
           alt=""
           loading="lazy"
         />

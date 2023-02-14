@@ -25,7 +25,7 @@ function FoodCards({ items, activeItem, setActiveItem, setCardToggle }: Props) {
     >
       <div className={styles.item__img}>
         <img
-          src={require(`../../assets/paimon-images/Food/Item_Adeptus'_Temptation.webp`)}
+          src={require(`../../assets/images/Food/Item_Adeptus'_Temptation.webp`)}
           alt=""
           loading="lazy"
         />

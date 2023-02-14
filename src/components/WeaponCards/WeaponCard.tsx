@@ -24,7 +24,7 @@ function WeaponCard(props: Props) {
       onClick={clickHandler}
     >
       <img
-        src={require(`../../assets/paimon-images/weapons/${props.weapon.name}.png`)}
+        src={require(`../../assets/images/weapons/${props.weapon.name}.png`)}
         alt=""
         loading="lazy"
       />

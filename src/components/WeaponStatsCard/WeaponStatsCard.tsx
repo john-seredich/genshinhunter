@@ -33,7 +33,7 @@ function StatsCard(props: Props) {
           <p>{calculateStars(props.activeCard.rarity)}</p>
         </div>
         <img
-          src={require(`../../assets/paimon-images/weapons/${props.activeCard.id}.png`)}
+          src={require(`../../assets/images/weapons/${props.activeCard.id}.png`)}
           alt={props.activeCard.name}
           loading="lazy"
         />
