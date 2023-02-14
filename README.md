@@ -2,7 +2,7 @@
 
 🎮📚 **Genshin Impact Database built using ReactJS, React Query, React Router, and TypeScript.**
 Here you can find information about the game, including info about characters, weapons, materials, and various other things for making your journey smooth.
-[Live Demo](https://github.com/john-seredich/genshinhunter)
+[Live Demo](https://john-seredich.github.io/genshinhunter/#/)
 
 # How I worked on this project
 
