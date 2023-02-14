@@ -43,7 +43,10 @@ function Weapons() {
     data: weaponList,
     isLoading,
     error,
-  } = useQuery([sort], () => fetchWeapons(sort));
+  } = useQuery([sort], () => fetchWeapons(sort), {
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
+  });
 
   const weaponListElement = weaponList?.map((weapon) => {
     return (
