@@ -2,6 +2,7 @@ import styles from "./Homepage.module.scss";
 import Header from "../../Layout/Header/Header";
 import { Link } from "react-router-dom";
 import { links } from "../../links";
+import Footer from "../../Layout/Footer/Footer";
 
 function Homepage() {
   return (
@@ -38,6 +39,7 @@ function Homepage() {
           </ul>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

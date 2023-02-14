@@ -6,6 +6,7 @@ import { staticFoodData } from "../../staticItemData";
 import { IStaticFoodData } from "../../test/staticFoodData.interface";
 import InfoCard from "../../components/FoodStatsCard/FoodStatsCard";
 import FoodCards from "../../components/FoodCards/FoodCards";
+import Footer from "../../Layout/Footer/Footer";
 
 interface IApiData {
   name: string;
@@ -63,6 +64,7 @@ function Food() {
           <InfoCard activeItem={activeItem} setCardToggle={setCardToggle} />
         )}
       </div>
+      <Footer />
     </>
   );
 }

@@ -8,6 +8,7 @@ import Header from "../../Layout/Header/Header";
 import { IActiveCard } from "../../shared/interface/activeCard.interface";
 import { staticItemData } from "../../staticItemData";
 import styles from "./Weapons.module.scss";
+import Footer from "../../Layout/Footer/Footer";
 
 interface IWeaponList {
   data: IActiveCard;
@@ -77,6 +78,7 @@ function Weapons() {
         )}
       </div>
       <Sort sort={sort} setSort={setSort} />
+      <Footer />
     </>
   );
 }
