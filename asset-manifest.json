@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/genshinhunter/static/css/main.6028a12c.css",
-    "main.js": "/genshinhunter/static/js/main.3889ebfe.js",
+    "main.css": "/genshinhunter/static/css/main.03f4f7b6.css",
+    "main.js": "/genshinhunter/static/js/main.e14295c4.js",
     "static/js/787.3067f6a5.chunk.js": "/genshinhunter/static/js/787.3067f6a5.chunk.js",
     "static/media/aqua-simulacra.png": "/genshinhunter/static/media/aqua-simulacra.2e8d8625d66227861a9c.png",
-    "static/media/bg_item_5_star.svg": "/genshinhunter/static/media/bg_item_5_star.26e88a475260125489d1.svg",
     "static/media/thundering-pulse.png": "/genshinhunter/static/media/thundering-pulse.bb83cc49eb2daede1c50.png",
     "static/media/mistsplitter-reforged.png": "/genshinhunter/static/media/mistsplitter-reforged.367d4ce379843bcc9302.png",
     "static/media/fading-twilight.png": "/genshinhunter/static/media/fading-twilight.0cdf49bfb6d9cc6cbf8f.png",
@@ -153,6 +152,7 @@
     "static/media/iron-point.png": "/genshinhunter/static/media/iron-point.1297bb9a31a6329b9dd3.png",
     "static/media/the-flagstaff.png": "/genshinhunter/static/media/the-flagstaff.991fed64b364c9f2b0ee.png",
     "static/media/beginner-s-protector.png": "/genshinhunter/static/media/beginner-s-protector.2184774fec924fc58382.png",
+    "static/media/Item_Adeptus'_Temptation.webp": "/genshinhunter/static/media/Item_Adeptus'_Temptation.100b2b1466d5db33a3f6.webp",
     "static/media/wandering-evenstar.png": "/genshinhunter/static/media/wandering-evenstar.70fce54eea83053f2525.png",
     "static/media/eberlasting-moonglow.png": "/genshinhunter/static/media/eberlasting-moonglow.16ec3aa4df3dbec0f9ef.png",
     "static/media/everlasting-moonglow.png": "/genshinhunter/static/media/everlasting-moonglow.16ec3aa4df3dbec0f9ef.png",
@@ -173,12 +173,12 @@
     "static/media/inventory_icon_character_development_items.webp": "/genshinhunter/static/media/inventory_icon_character_development_items.388fe96f81456b27f0b5.webp",
     "static/media/inventory_icon_precious_items.webp": "/genshinhunter/static/media/inventory_icon_precious_items.42ac024f73bd30390fdf.webp",
     "static/media/inventory_icon_quest.webp": "/genshinhunter/static/media/inventory_icon_quest.fd4750a45a82650f43c5.webp",
-    "main.6028a12c.css.map": "/genshinhunter/static/css/main.6028a12c.css.map",
-    "main.3889ebfe.js.map": "/genshinhunter/static/js/main.3889ebfe.js.map",
+    "main.03f4f7b6.css.map": "/genshinhunter/static/css/main.03f4f7b6.css.map",
+    "main.e14295c4.js.map": "/genshinhunter/static/js/main.e14295c4.js.map",
     "787.3067f6a5.chunk.js.map": "/genshinhunter/static/js/787.3067f6a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6028a12c.css",
-    "static/js/main.3889ebfe.js"
+    "static/css/main.03f4f7b6.css",
+    "static/js/main.e14295c4.js"
   ]
 }
